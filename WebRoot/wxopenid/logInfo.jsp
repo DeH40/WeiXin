@@ -1,4 +1,5 @@
 
+
 <%@page import="java.net.URLDecoder"%>
 <%@ page  isELIgnored="false" language="java" import="java.util.*,com.test.servlet.getUserName" pageEncoding="UTF-8"%>
 
@@ -38,5 +39,11 @@
     	<% 
     	} %>    
          <h2><a href="reg.jsp">注册</a></h2>
+
+
+
+
+
+
   </body>
 </html>

@@ -55,7 +55,8 @@ public class regServlet extends HttpServlet {
 	public void doPost(HttpServletRequest request, HttpServletResponse response)
 			throws ServletException, IOException {
 		PrintWriter out = response.getWriter();
-		request.setCharacterEncoding("UTF-8");
+
+
 		String username=request.getParameter("username");
 		String openid=request.getParameter("openid");
 		
@@ -63,11 +64,12 @@ public class regServlet extends HttpServlet {
 			try {
 				conn = DBHepler.getConnection();
 				Statement statement=(Statement) conn.createStatement();
-				
+				//дһ��sql���
 				String sql="insert into opid_username(openid,username) values('OPENID','USERNAME')".replace("OPENID", openid).replace("USERNAME", username);
-				
+				//executeupdaʵ�ֱ����ɾ��
 				statement.executeUpdate(sql);
 				//�ر�
+
 				statement.close();
 				conn.close();
 			} catch (SQLException e) {

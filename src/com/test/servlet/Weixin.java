@@ -33,13 +33,11 @@ import com.test.po.TextMessage;
 import com.test.util.MsgUtil;
 @WebServlet("/wxopenid/WeiXin")
 public class Weixin extends HttpServlet {
+
     String sToken = "Kmvqet4J2N";//Token
     String sCorpID = "wxe10a9a80eb785b66";//CorpID
     String sEncodingAESKey = "eVmjkzXDFWxN1nlsy0hO8TBvjm5tPmLoTlaJfekLE9t";//EncodingAESKey
-    /**
-     * ȷ����������΢�ŷ�����
-     * @throws IOException 
-     */
+
     public void doGet(HttpServletRequest request, HttpServletResponse response) throws IOException{
          
        
@@ -64,9 +62,7 @@ public class Weixin extends HttpServlet {
         }
     }
  
-    /**
-     * ����΢�ŷ�������������Ϣ
-     */
+    
     public void doPost(HttpServletRequest request, HttpServletResponse response) throws ServletException, IOException {
     	request.setCharacterEncoding("UTF-8");
 		response.setCharacterEncoding("UTF-8");
@@ -108,6 +104,7 @@ public class Weixin extends HttpServlet {
 				textMessage.setFromUserName(toUserName);
 				textMessage.setToUserName(fromUserName);
 				textMessage.setContent("你发送了一张图片");
+
 				textMessage.setAgentID("6");
 				textMessage.setCreateTime(1348831860);
 				textMessage.setMsgType("text");
