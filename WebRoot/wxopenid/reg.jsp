@@ -28,7 +28,7 @@ String basePath = request.getScheme()+"://"+request.getServerName()+":"+request.
     request.setCharacterEncoding("utf-8");
     String opid=(String)session.getAttribute("opid");
    %>
-    <form action="servlet/regServlet" method="post">
+    <form action="wxopenid/reg" method="post">
      	用户名：<input type="text" name="username">
      	<input type="hidden" value=<%=opid %> name="openid">
      	 <input type="submit" value="提交">
